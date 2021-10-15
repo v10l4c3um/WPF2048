@@ -1,0 +1,95 @@
+﻿<Window x:Class="_2048Game.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_2048Game"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="400" Background="#FFF8F6E9"
+        KeyDown="Grid_KeyDown">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Settings/StyleDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="77*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" Style="{DynamicResource MyBackground}" Margin="20,20,5,10">
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                        <Label Style="{DynamicResource MyLabel}" HorizontalAlignment="Center" VerticalAlignment="Top">Score</Label>
+                        <TextBlock x:Name="textBlockScore" Style="{DynamicResource MyTextBlock}" HorizontalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border Grid.Column="1" Style="{DynamicResource MyBackground}" Margin="5,20,20,10">
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                        <Label Style="{DynamicResource MyLabel}" HorizontalAlignment="Center" VerticalAlignment="Top">High Score</Label>
+                        <TextBlock x:Name="textBlockHighScore" Style="{DynamicResource MyTextBlock}" HorizontalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                </Border>
+            </Grid>
+            <Border Grid.Row="1" Style="{DynamicResource MyBackground}" Margin="20,0,20,20" Padding="5">
+                <UniformGrid Rows="4" Columns="4">
+                    <Border x:Name="Tile00" Style="{DynamicResource MyTile}" Background="#CDC1B5">
+                        <TextBlock x:Name="Text00" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"></TextBlock>
+                    </Border>
+                    <Border x:Name="Tile01" Style="{DynamicResource MyTile}" Background="#CDC1B5">
+                        <TextBlock x:Name="Text01" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"></TextBlock>
+                    </Border>
+                    <Border x:Name="Tile02" Style="{DynamicResource MyTile}" Background="#CDC1B5">
+                        <TextBlock x:Name="Text02" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"></TextBlock>
+                    </Border>
+                    <Border x:Name="Tile03" Style="{DynamicResource MyTile}" Background="#CDC1B5">
+                        <TextBlock x:Name="Text03" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"></TextBlock>
+                    </Border>
+                    <Border x:Name="Tile10" Style="{DynamicResource MyTile}" Background="#CDC1B5">
+                        <TextBlock x:Name="Text10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"></TextBlock>
+                    </Border>
+                    <Border x:Name="Tile11" Style="{DynamicResource MyTile}" Background="#CDC1B5">
+                        <TextBlock x:Name="Text11" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"></TextBlock>
+                    </Border>
+                    <Border x:Name="Tile12" Style="{DynamicResource MyTile}" Background="#CDC1B5">
+                        <TextBlock x:Name="Text12" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"></TextBlock>
+                    </Border>
+                    <Border x:Name="Tile13" Style="{DynamicResource MyTile}" Background="#CDC1B5">
+                        <TextBlock x:Name="Text13" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"></TextBlock>
+                    </Border>
+                    <Border x:Name="Tile20" Style="{DynamicResource MyTile}" Background="#CDC1B5">
+                        <TextBlock x:Name="Text20" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"></TextBlock>
+                    </Border>
+                    <Border x:Name="Tile21" Style="{DynamicResource MyTile}" Background="#CDC1B5">
+                        <TextBlock x:Name="Text21" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"></TextBlock>
+                    </Border>
+                    <Border x:Name="Tile22" Style="{DynamicResource MyTile}" Background="#CDC1B5">
+                        <TextBlock x:Name="Text22" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"></TextBlock>
+                    </Border>
+                    <Border x:Name="Tile23" Style="{DynamicResource MyTile}" Background="#CDC1B5">
+                        <TextBlock x:Name="Text23" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"></TextBlock>
+                    </Border>
+                    <Border x:Name="Tile30" Style="{DynamicResource MyTile}" Background="#CDC1B5">
+                        <TextBlock x:Name="Text30" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"></TextBlock>
+                    </Border>
+                    <Border x:Name="Tile31" Style="{DynamicResource MyTile}" Background="#CDC1B5">
+                        <TextBlock x:Name="Text31" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"></TextBlock>
+                    </Border>
+                    <Border x:Name="Tile32" Style="{DynamicResource MyTile}" Background="#CDC1B5">
+                        <TextBlock x:Name="Text32" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"></TextBlock>
+                    </Border>
+                    <Border x:Name="Tile33" Style="{DynamicResource MyTile}" Background="#CDC1B5">
+                        <TextBlock x:Name="Text33" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"></TextBlock>
+                    </Border>
+                </UniformGrid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
